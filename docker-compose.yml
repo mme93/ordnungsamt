@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  dbmanager_fronted:
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+    ports:
+      - "82:4200"
