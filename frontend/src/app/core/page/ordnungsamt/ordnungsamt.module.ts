@@ -3,6 +3,7 @@ import {OrdnungsamtRoutingModule} from "./ordnungsamt-routing.module";
 import {OrdnungsamtComponent} from "./ordnungsamt.component";
 import {DividerModule} from "primeng/divider";
 import {CardModule} from "primeng/card";
+import { AnzeigeComponent } from './anzeige/anzeige.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,7 @@ import {CardModule} from "primeng/card";
   ],
   providers: [],
   exports: [],
-  declarations: [OrdnungsamtComponent]
+  declarations: [OrdnungsamtComponent,AnzeigeComponent]
 })
 export class OrdnungsamtModule {
 }

@@ -1,11 +1,15 @@
-import {RouterModule, Routes} from "@angular/router";
-import {NgModule} from "@angular/core";
-import {OrdnungsamtComponent} from "./ordnungsamt.component";
+import { RouterModule, Routes } from "@angular/router";
+import { NgModule } from "@angular/core";
+import { OrdnungsamtComponent } from "./ordnungsamt.component";
 
 const routes: Routes = [
   {
     path: '',
     component: OrdnungsamtComponent
+  },
+  {
+    path: 'anzeige',
+    loadChildren: () => import('./anzeige/anzeige.module').then(m => m.AnzeigeModule),
   }
 ]
 
@@ -13,5 +17,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class OrdnungsamtRoutingModule {
-}
+export class OrdnungsamtRoutingModule { }
