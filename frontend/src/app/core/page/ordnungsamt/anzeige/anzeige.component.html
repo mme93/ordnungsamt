@@ -1,60 +1,7 @@
-<article>
+<article class="full-card">
   <h1 style="text-align: center">Ordnungsamt Mülheim an der Ruhr - Standortsuche</h1>
-
-  <!-- Adresseingabe-Teil -->
-  <div class="p-grid p-justify-center">
-    <div class="p-col-12 p-md-10 p-lg-8">
-      <div class="p-card">
-        <div class="p-card-header">
-          <h2>Adresse eingeben</h2>
-        </div>
-
-        <div class="p-card-body">
-          <div class="p-grid p-align-center">
-            <!-- Erste Reihe: Straße und Hausnummer -->
-            <div class="p-col-12 p-md-6">
-              <div class="p-field">
-                <label for="street">Straße</label>
-                <input pInputText id="street" [(ngModel)]="street" placeholder="Musterstraße">
-              </div>
-            </div>
-            <div class="p-col-12 p-md-6">
-              <div class="p-field">
-                <label for="houseNumber">Hausnummer</label>
-                <input pInputText id="houseNumber" [(ngModel)]="houseNumber" placeholder="123">
-              </div>
-            </div>
-
-            <!-- Zweite Reihe: PLZ und Stadt -->
-            <div class="p-col-12 p-md-6">
-              <div class="p-field">
-                <label for="zipCode">PLZ</label>
-                <input pInputText id="zipCode" [(ngModel)]="zipCode" placeholder="45468">
-              </div>
-            </div>
-            <div class="p-col-12 p-md-6">
-              <div class="p-field">
-                <label for="city">Stadt</label>
-                <input pInputText id="city" [(ngModel)]="city" placeholder="Mülheim an der Ruhr">
-              </div>
-            </div>
-
-            <!-- Suchen Button -->
-            <div class="p-col-12">
-              <div class="p-field">
-                <p-button label="Suchen" icon="pi pi-search" (onClick)="locateAddress()"></p-button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Karte-Teil -->
-  <div class="p-grid p-justify-center">
-    <div class="p-col-12 p-md-10 p-lg-10">
-      <div id="map" class="map-container"></div>
-    </div>
+  <div>
+    <app-basic-map></app-basic-map>
   </div>
 </article>
+

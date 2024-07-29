@@ -1,0 +1,22 @@
+.full-card {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.p-card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  position: relative;
+}
+
+.map-container {
+  flex-grow: 1;
+  width: 100%;
+  height: calc(65vh);
+}
+::ng-deep .p-component{
+  height: 100% ;
+}

@@ -19,13 +19,12 @@ import {TableModule} from "primeng/table";
 import {PaginatorModule} from "primeng/paginator";
 import {CheckboxModule} from "primeng/checkbox";
 import {MessagesModule} from "primeng/messages";
-import {OpenLayerMapComponent} from "./shared/components/map/open-layer-map/open-layer-map.component";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   declarations: [
     AppComponent,
-    OpenLayerMapComponent
-  ],
+      ],
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
@@ -45,9 +44,14 @@ import {OpenLayerMapComponent} from "./shared/components/map/open-layer-map/open
     TableModule,
     PaginatorModule,
     CheckboxModule,
-    MessagesModule
+    MessagesModule,
+    RouterModule
   ],
   providers: [],
+  exports: [
+
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

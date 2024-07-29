@@ -3,6 +3,7 @@ import {DividerModule} from "primeng/divider";
 import {CardModule} from "primeng/card";
 import {AnzeigeRoutingModule} from "./anzeige-routing.module";
 
+
 @NgModule({
   imports: [
     AnzeigeRoutingModule,

@@ -1,0 +1,31 @@
+<p-card class="full-card">
+  <div class="p-card-header">
+    <p-table>
+      <ng-template pTemplate="header">
+        <tr>
+          <th>
+            <label for="street">Straße</label>
+            <input pInputText id="street" [(ngModel)]="street" placeholder="Musterstraße">
+          </th>
+          <th>
+            <label for="houseNumber">Hausnummer</label>
+            <input pInputText id="houseNumber" [(ngModel)]="houseNumber" placeholder="123">
+          </th>
+          <th>
+            <label for="zipCode">PLZ</label>
+            <input pInputText id="zipCode" [(ngModel)]="zipCode" placeholder="45468">
+          </th>
+          <th>
+            <label for="city">Stadt</label>
+            <input pInputText id="city" [(ngModel)]="city" placeholder="Mülheim an der Ruhr">
+          </th>
+          <th>
+            <p-button label="Suchen" icon="pi pi-search" (onClick)="locateAddress()"></p-button>
+          </th>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  <p-divider></p-divider>
+  <div class="map-container" id="map"></div>
+</p-card>

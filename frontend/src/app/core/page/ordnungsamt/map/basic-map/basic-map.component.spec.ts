@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { OpenLayerMapComponent } from './open-layer-map.component';
+import { BasicMapComponent } from './basic-map.component';
 
-describe('OpenLayerMapComponent', () => {
-  let component: OpenLayerMapComponent;
-  let fixture: ComponentFixture<OpenLayerMapComponent>;
+describe('BasicMapComponent', () => {
+  let component: BasicMapComponent;
+  let fixture: ComponentFixture<BasicMapComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [OpenLayerMapComponent]
+      declarations: [BasicMapComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(OpenLayerMapComponent);
+    fixture = TestBed.createComponent(BasicMapComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
