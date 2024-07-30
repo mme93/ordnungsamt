@@ -3,26 +3,104 @@
     <p style="text-align: center">Anzeig erstellen</p>
   </ng-template>
   <p-divider></p-divider>
-  <p>Art der Beschwerde</p>
-  <p-dropdown [options]="beschwerdeArten" [(ngModel)]="selectedBeschwerdeArten" optionLabel="name"></p-dropdown>
 
-  <p>Grund der Beschwerde</p>
-  <input pInputText placeholder="Table Name"/>
+  <p style="font-weight: bold">Beschwerde Informationen</p>
+
+  <div class="p-d-flex p-ai-start">
+    <div class="p-d-flex p-flex-column p-p-2" style="flex: 1;">
+      <p>Art der Beschwerde</p>
+      <p-dropdown
+        [options]="beschwerdeArten"
+        [(ngModel)]="selectedBeschwerdeArten"
+        optionLabel="name"
+        class="p-mt-1"
+      ></p-dropdown>
+    </div>
+    <div class="p-d-flex p-flex-column p-p-2" style="flex: 1;">
+      <p>Grund der Beschwerde</p>
+      <input pInputTextarea placeholder="Table Name" class="p-mt-1"/>
+    </div>
+  </div>
+
+  <p-divider></p-divider>
+  <div>
+    <p class="p-text-bold" style="font-weight: bold">Örtlichkeit der Beschwerde</p>
+
+    <div class="flex-container">
+      <div class="flex-item">
+        <p>Straße</p>
+        <input pInputText placeholder="Straße"/>
+      </div>
+
+      <div class="flex-item">
+        <p>Hausnummer</p>
+        <input pInputText placeholder="Hausnummer"/>
+      </div>
+
+      <div class="flex-item">
+        <p>Postleitzahl</p>
+        <input pInputText placeholder="Postleitzahl"/>
+      </div>
+
+      <div class="flex-item">
+        <p>Stadt</p>
+        <input pInputText placeholder="Stadt"/>
+      </div>
+
+      <div class="flex-item button-container">
+        <p-button label="Adresse Prüfen" class="button-height-p"></p-button>
+        <p-button label="Karte öffnen" class="button-height-input" (onClick)="openMap()"></p-button>
+        <p-button label="Aktueller Ort" class="button-height-input"></p-button>
+      </div>
+    </div>
+  </div>
 
   <p-divider></p-divider>
 
-  <p>Örtlichkeit der Beschwerde</p>
+  <p class="p-text-bold" style="font-weight: bold">Eigene Angaben</p>
 
-  <p>Hausnummer</p>
-  <input pInputText placeholder="Table Name"/>
+  <div class="flex-container">
+    <div class="flex-item">
+      <p>Straße</p>
+      <input pInputText placeholder="Straße"/>
+    </div>
 
-  <p>Hausnummer</p>
-  <input pInputText placeholder="Table Name"/>
+    <div class="flex-item">
+      <p>Hausnummer</p>
+      <input pInputText placeholder="Hausnummer"/>
+    </div>
 
-  <p>Postleitzahl</p>
-  <input pInputText placeholder="Table Name"/>
+    <div class="flex-item">
+      <p>Postleitzahl</p>
+      <input pInputText placeholder="Postleitzahl"/>
+    </div>
 
-  <p>Stadt</p>
-  <input pInputText placeholder="Table Name"/>
+    <div class="flex-item">
+      <p>Stadt</p>
+      <input pInputText placeholder="Stadt"/>
+    </div>
+  </div>
+
+  <div class="flex-container">
+    <div class="flex-item">
+      <p>Vorname</p>
+      <input pInputText placeholder="Vorname"/>
+    </div>
+
+    <div class="flex-item">
+      <p>Nachname</p>
+      <input pInputText placeholder="Hausnummer"/>
+    </div>
+
+    <div class="flex-item">
+      <p>Handy-Nr.</p>
+      <input pInputText placeholder="Handy-Nr."/>
+    </div>
+
+    <div class="flex-item">
+      <p>Email</p>
+      <input pInputText placeholder="Email"/>
+    </div>
+  </div>
 
 </p-card>

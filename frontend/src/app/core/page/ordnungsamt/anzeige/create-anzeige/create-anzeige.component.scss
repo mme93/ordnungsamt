@@ -1,12 +1,29 @@
 ::ng-deep .p-card {
   margin: 2%;
 }
-.inline-button {
-  display: inline-block; /* oder inline */
-  margin-right: 10px;    /* optional, für Abstand zwischen den Buttons */
+
+/* Allgemeine Flex-Container-Stile */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem; /* Abstand zwischen den flex-Items */
 }
 
-.inline-inputField {
-  display: inline-block; /* oder inline */
-  margin-right: 10px;    /* optional, für Abstand zwischen den Buttons */
+.flex-item {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 20%; /* Stellt sicher, dass die Items gleichmäßig verteilt werden */
+}
+
+/* Button-Stile */
+.button-container {
+  display: flex;
+  flex-direction: row; /* Buttons nebeneinander */
+  gap: 1rem; /* Abstand zwischen den Buttons */
+  flex: 1 1 20%; /* Stellt sicher, dass die Buttons den gleichen Platz wie die anderen Items einnehmen */
+}
+
+.button-height {
+  height: auto; /* Höhe basierend auf dem Text */
+  min-height: 2.5rem; /* Mindesthöhe für Buttons */
 }

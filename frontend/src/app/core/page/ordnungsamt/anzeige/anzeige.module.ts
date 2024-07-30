@@ -5,8 +5,11 @@ import {AnzeigeRoutingModule} from "./anzeige-routing.module";
 import { CreateAnzeigeComponent } from './create-anzeige/create-anzeige.component';
 import {DropdownModule} from "primeng/dropdown";
 import {FormsModule} from "@angular/forms";
-import {Button} from "primeng/button";
+import {Button, ButtonModule} from "primeng/button";
 import {InputTextModule} from "primeng/inputtext";
+import {PanelModule} from "primeng/panel";
+import {RippleModule} from "primeng/ripple";
+import {InputTextareaModule} from "primeng/inputtextarea";
 
 
 @NgModule({
@@ -17,7 +20,11 @@ import {InputTextModule} from "primeng/inputtext";
     DropdownModule,
     FormsModule,
     Button,
-    InputTextModule
+    InputTextModule,
+    ButtonModule,
+    PanelModule,
+    RippleModule,
+    InputTextareaModule
   ],
   providers: [],
   exports: [],
