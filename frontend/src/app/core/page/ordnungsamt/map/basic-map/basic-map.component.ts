@@ -50,4 +50,44 @@ export class BasicMapComponent implements AfterViewInit {
       }
     });
   }
+
+  getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.getAddressFromCoordinates(position.coords.longitude,position.coords.latitude)
+        // @ts-ignore
+        this.map.getView().setCenter(fromLonLat([position.coords.longitude, position.coords.latitude]));
+        // @ts-ignore
+        this.map.getView().setZoom(20);
+        console.error('Adresse gefunden an: Lat.:'+position.coords.latitude +' Long.:'+position.coords.longitude+'.');
+      }, (error) => {
+        console.error('Error fetching location', error);
+      });
+    } else {
+      console.error('Geolocation is not supported by this browser.');
+    }
+  }
+
+  getAddressFromCoordinates(latitude:any, longitude:any) {
+    const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&addressdetails=1`;
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        if (data.address) {
+          // Detailierte Adresse ausgeben, falls vorhanden
+          let address = data.address.road || '';
+          let city = data.address.city || data.address.town || data.address.village || '';
+          let state = data.address.state || '';
+          let country = data.address.country || '';
+
+          console.log(`Adresse: ${address}, ${city}, ${state}, ${country}`);
+        } else {
+          console.error('Keine genaue Adresse gefunden an: Lat.:'+latitude +' Long.:'+longitude+', alternative Informationen:');
+          console.log('Rohdaten:', data);
+        }
+      })
+      .catch(error => console.error('Fehler bei der Adresssuche:', error));
+  }
+
 }
