@@ -1,0 +1,28 @@
+<p-card>
+  <ng-template pTemplate="title">
+    <p style="text-align: center">Anzeig erstellen</p>
+  </ng-template>
+  <p-divider></p-divider>
+  <p>Art der Beschwerde</p>
+  <p-dropdown [options]="beschwerdeArten" [(ngModel)]="selectedBeschwerdeArten" optionLabel="name"></p-dropdown>
+
+  <p>Grund der Beschwerde</p>
+  <input pInputText placeholder="Table Name"/>
+
+  <p-divider></p-divider>
+
+  <p>Örtlichkeit der Beschwerde</p>
+
+  <p>Hausnummer</p>
+  <input pInputText placeholder="Table Name"/>
+
+  <p>Hausnummer</p>
+  <input pInputText placeholder="Table Name"/>
+
+  <p>Postleitzahl</p>
+  <input pInputText placeholder="Table Name"/>
+
+  <p>Stadt</p>
+  <input pInputText placeholder="Table Name"/>
+
+</p-card>

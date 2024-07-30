@@ -19,7 +19,7 @@ export class MenuService {
           {
             label: 'Anzeigen',
             icon: 'pi pi-fw pi-server',
-            routerLink:'/ordnungsamt/anzeige',
+            routerLink:'/ordnungsamt/anzeige/neu',
             items: [
               {
                 label: 'Straßenverkehrsrecht',
