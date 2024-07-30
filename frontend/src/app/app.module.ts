@@ -20,6 +20,7 @@ import {PaginatorModule} from "primeng/paginator";
 import {CheckboxModule} from "primeng/checkbox";
 import {MessagesModule} from "primeng/messages";
 import {RouterModule} from "@angular/router";
+import {DialogService} from "primeng/dynamicdialog";
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import {RouterModule} from "@angular/router";
     MessagesModule,
     RouterModule
   ],
-  providers: [],
+  providers: [DialogService],
   exports: [
 
   ],
